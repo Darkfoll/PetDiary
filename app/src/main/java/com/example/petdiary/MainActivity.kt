@@ -34,6 +34,15 @@ class MainActivity : AppCompatActivity() {
             // Увеличиваем счётчик
             clickCount++
 
+            // После 3 нажатий открываем новое окно
+            if (clickCount == 3) {
+
+                val intent = Intent(this, SecondActivity::class.java)
+                startActivity(intent)
+
+                return@setOnClickListener
+            }
+
             // Меняем картинку
             currentImage++
 
@@ -44,14 +53,6 @@ class MainActivity : AppCompatActivity() {
 
             // Устанавливаем новую картинку
             backgroundImage.setImageResource(images[currentImage])
-
-            // После 3 нажатий открываем новое окно
-            if (clickCount == 3) {
-
-                val intent = Intent(this, SecondActivity::class.java)
-                startActivity(intent)
-
-            }
         }
     }
 }
