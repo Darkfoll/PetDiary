@@ -1,70 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-
-
-
+    <!-- Заголовок -->
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Давайте начнём"
-        android:textSize="24sp"/>
+        android:text="Создание аккаунта"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"/>
 
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Создание Аккаунта" />
-
-
+    <!-- Поле Имя (только для регистрации) -->
     <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="wrap_content"
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:hint="Name"
+        android:hint="Имя"
         android:drawableStart="@drawable/ic_user"
         android:paddingStart="10dp"
-        android:drawablePadding="8dp" />
+        android:drawablePadding="8dp"
+        android:inputType="text"
+        android:layout_marginBottom="16dp"/>
 
+    <!-- Поле Email -->
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="wrap_content"
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:hint="Email Address"
+        android:hint="Email"
         android:drawableStart="@drawable/ic_email"
         android:paddingStart="10dp"
-        android:drawablePadding="8dp" />
+        android:drawablePadding="8dp"
+        android:inputType="textEmailAddress"
+        android:layout_marginBottom="16dp"/>
 
+    <!-- Поле Пароль -->
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="210dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:endIconMode="password_toggle">
+        app:endIconMode="password_toggle"
+        android:layout_marginBottom="24dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/ic_password"
-            android:hint="Password"
+            android:hint="Пароль"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <!-- Кнопка действия (Регистрация/Вход) -->
     <Button
-        android:id="@+id/button"
+        android:id="@+id/actionButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Зарегестрироватся" />
+        android:text="Зарегистрироваться"
+        android:layout_marginBottom="16dp"/>
 
+    <!-- Текст для переключения режима -->
+    <TextView
+        android:id="@+id/switchModeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Уже есть аккаунт? Войти"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="14sp"
+        android:padding="8dp"
+        android:clickable="true"
+        android:focusable="true"/>
 
 </LinearLayout>
