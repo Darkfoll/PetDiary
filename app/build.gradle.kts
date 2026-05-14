@@ -37,6 +37,7 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.remote.creation.core)
     implementation(libs.material)
     implementation("com.kizitonwose.calendar:view:2.5.0")
     // Room Database
