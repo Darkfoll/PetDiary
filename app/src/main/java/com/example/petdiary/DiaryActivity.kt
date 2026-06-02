@@ -90,6 +90,14 @@ class DiaryActivity : AppCompatActivity() {
 
         openSheetBtn = findViewById(R.id.openSheetBtn)
 
+        val backBtn = findViewById<Button>(R.id.backCard)
+
+        backBtn.setOnClickListener {
+
+
+            finish() // закрывает текущее окно
+        }
+
         openSheetBtn.setOnClickListener {
             showBottomSheet()
         }
