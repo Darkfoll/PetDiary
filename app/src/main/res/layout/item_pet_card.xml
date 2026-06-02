@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:layout_margin="8dp"
+    android:background="#DDDDDD">
+
+    <ImageView
+        android:id="@+id/cardImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp">
+
+        <TextView
+            android:id="@+id/cardName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Имя"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/cardBreed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Порода"/>
+
+        <TextView
+            android:id="@+id/cardAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Возраст"/>
+
+    </LinearLayout>
+
+</LinearLayout>
